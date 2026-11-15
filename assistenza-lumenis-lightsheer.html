@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="img/logo_white_menu.svg">
+<link rel="canonical" href="https://www.debeauty.it/assistenza-lumenis-lightsheer.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Assistenza e manutenzione Lumenis LightSheer – DEBEAUTY">
+<meta property="og:description" content="Vendita, noleggio, formazione e centro tecnico per laser, apparecchiature estetiche e autoclavi.">
+<meta property="og:image" content="https://www.debeauty.it/img/ls_desire.jpg">
+<meta property="og:url" content="https://www.debeauty.it/assistenza-lumenis-lightsheer.html">
+<title>Assistenza e manutenzione Lumenis LightSheer | DEBEAUTY centro tecnico</title>
+<meta name="description" content="Assistenza, manutenzione e riparazione dei laser Lumenis LightSheer Desire, Duet, Infinity, ET e XC: diagnosi in laboratorio, raffreddamento, manipoli, verifica dell'energia emessa. Sardegna e tutta Italia.">
+<style>
+@font-face{font-family:Outfit;font-style:normal;font-weight:300 600;font-display:swap;src:url(font/outfit-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:Outfit;font-style:normal;font-weight:300 600;font-display:swap;src:url(font/outfit-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+:root{
+  --ink:#16171b; --grey:#5d5f66; --arch:#ece5d8; --gold:#a88b5c;
+  --paper:#ffffff; --soft:#faf7f1; --dark:#101114; --line:#d9d3c7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,sans-serif;font-weight:300;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
+h1,h2,h3{font-weight:500;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(34px,5.2vw,62px)}
+h2{font-size:clamp(28px,3.6vw,44px);margin-top:14px}
+h3{font-size:20px}
+p.lead{font-size:19px;color:var(--grey);max-width:60ch;margin-top:18px}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:500;font-size:15px;letter-spacing:.02em;border:1px solid var(--ink);transition:.2s}
+.btn.full{background:var(--ink);color:#fff}
+.btn.full:hover{background:var(--gold);border-color:var(--gold)}
+.btn.line:hover{background:var(--ink);color:#fff}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn.gold:hover{background:#fff;color:var(--ink);border-color:#fff}
+section{padding:96px 0}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+header .logo img{height:44px}
+nav{display:flex;gap:30px;font-size:15px;font-weight:400}
+nav a:hover{color:var(--gold)}
+header .btn{padding:10px 20px;font-size:14px}
+#menu{display:none}
+
+/* hero */
+.hero{padding:70px 0 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.hero .txt{padding-bottom:90px}
+.hero h1{margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.hero .pic{position:relative;height:560px;display:flex;justify-content:center;align-items:flex-end}
+.hero .pic::before{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,92%);height:500px;background:var(--arch);border-radius:999px 999px 0 0}
+.hero .pic img{position:relative;height:520px;width:auto;object-fit:contain;mix-blend-mode:multiply}
+
+/* numeri */
+.facts{background:var(--dark);color:#fff;padding:0}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.facts div{padding:30px 22px;border-left:1px solid #2a2c33}
+.facts div:first-child{border-left:0;padding-left:0}
+.facts b{display:block;font-weight:500;font-size:19px}
+.facts span{font-size:14px;color:#a9abb3}
+
+/* pilastri */
+.pill{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:54px}
+.pill article{border-top:2px solid var(--ink);padding-top:22px}
+.pill .n{font-size:13px;color:var(--gold);letter-spacing:.2em;font-weight:500}
+.pill h3{margin:10px 0 10px}
+.pill p{color:var(--grey);font-size:16px}
+.pill a{display:inline-block;margin-top:14px;font-weight:500;font-size:15px;border-bottom:1px solid var(--gold)}
+
+/* tecnologie */
+.tech{background:var(--soft)}
+.tech .head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(22,23,27,.09)}
+.card .ph{height:250px;background:var(--arch);display:flex;align-items:flex-end;justify-content:center;padding-top:22px}
+.card .ph img{height:100%;width:auto;object-fit:contain;mix-blend-mode:multiply}
+.card .tx{padding:22px 24px 26px}
+.card .cat{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.card h3{margin:6px 0 8px}
+.card p{font-size:15px;color:var(--grey)}
+
+/* formazione */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:50px}
+.box{border:1px solid var(--line);border-radius:18px;padding:34px}
+.box h3{margin-bottom:12px}
+.box p{color:var(--grey);font-size:16px}
+.box ul{margin-top:16px;list-style:none}
+.box li{padding:9px 0 9px 22px;border-top:1px solid var(--line);font-size:15px;position:relative}
+.box li::before{content:"";position:absolute;left:0;top:19px;width:8px;height:1px;background:var(--gold)}
+
+/* laboratorio */
+.lab{background:var(--dark);color:#fff}
+.lab .eyebrow{color:var(--gold)}
+.lab p.lead{color:#b9bbc2}
+.lab .cols{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:56px}
+.lab h3{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:8px}
+.lab ul{list-style:none}
+.lab li{padding:16px 0;border-bottom:1px solid #2a2c33;font-size:17px;display:flex;justify-content:space-between;gap:20px}
+.lab li span{color:#8d8f96;font-size:13px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;padding-top:4px}
+.lab .brands{margin-top:56px;padding:30px 34px;border:1px solid #2a2c33;border-radius:18px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.lab .brands p{max-width:62ch;color:#dcdcdf}
+.lab .brands b{font-weight:500;color:#fff}
+
+/* norme */
+.norm .cols{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.norm dl{border-top:2px solid var(--ink)}
+.norm dt{font-weight:500;padding-top:18px}
+.norm dd{color:var(--grey);font-size:16px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.net{background:var(--arch);padding:56px 0}
+.net .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.net p{font-size:22px;font-weight:400;max-width:46ch;line-height:1.35}
+
+/* contatti */
+.contact .cols{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact .list a,.contact .list div{display:block;padding:18px 0;border-bottom:1px solid var(--line);font-size:19px}
+.contact .list small{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.contact .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+footer{background:var(--dark);color:#8d8f96;font-size:13px;padding:34px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer img{height:40px}
+.wa{position:fixed;right:20px;bottom:20px;z-index:30;background:#25d366;color:#fff;font-weight:500;font-size:15px;padding:13px 20px;border-radius:999px;box-shadow:0 10px 26px rgba(0,0,0,.2)}
+
+@media(max-width:900px){
+  body{font-size:16px}
+  section{padding:64px 0}
+  nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--line)}
+  nav a{padding:16px 24px;border-top:1px solid var(--line)}
+  nav.open{display:flex}
+  #menu{display:block;background:none;border:0;font:inherit;font-weight:500;font-size:15px;cursor:pointer}
+  header .btn{display:none}
+  .hero .wrap,.lab .cols,.norm .cols,.contact .cols,.two{grid-template-columns:1fr;gap:34px}
+  .hero .txt{padding-bottom:10px}
+  .hero .pic{height:400px}
+  .hero .pic::before{height:350px;width:300px}
+  .hero .pic img{height:370px}
+  .facts .wrap{grid-template-columns:1fr 1fr}
+  .facts div{border-left:0;padding:20px 0;border-top:1px solid #2a2c33}
+  .facts div:nth-child(-n+2){border-top:0}
+  .pill,.grid{grid-template-columns:1fr}
+  .card .ph{height:220px}
+}
+
+/* tecnologie v2 */
+.feat{display:grid;grid-template-columns:1.15fr 1fr;gap:0;margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.feat:first-of-type{margin-top:50px}
+.feat.rev .ph{order:2}
+.feat .ph{background:#fff;min-height:340px;display:flex;align-items:center;justify-content:center;gap:10px;padding:26px}
+.feat .ph.duo img{width:48%;height:260px;object-fit:contain}
+.feat .ph:has(.cover){padding:0}
+.feat .ph img.cover{width:100%;height:100%;min-height:340px;object-fit:cover}
+.feat .tx{padding:44px 46px;display:flex;flex-direction:column;justify-content:center}
+.feat .cat{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.feat h3{font-size:30px;margin:8px 0 14px}
+.feat p{color:var(--grey);font-size:16.5px}
+.more{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;margin-top:50px}
+.more div{border-top:1px solid var(--ink);padding:20px 0 26px}
+.more h3{font-size:19px;margin-bottom:6px}
+.more p{font-size:15px;color:var(--grey)}
+.hero .pic::before{display:none}
+.hero .pic{height:auto;align-items:center;padding-bottom:60px}
+.hero .pic img{height:auto;width:100%;max-width:560px;mix-blend-mode:normal}
+/* laboratorio v2 */
+.lab .shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start}
+.lab figure{background:#fff;border-radius:16px;overflow:hidden;position:relative}
+.lab figure.big{grid-column:1/3}
+.lab figure img{width:100%;height:190px;object-fit:cover}
+.lab figure.big img{height:300px;object-fit:contain;padding:14px}
+.lab figcaption{position:absolute;left:12px;bottom:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:#fff;background:rgba(16,17,20,.72);padding:5px 10px;border-radius:999px}
+@media(max-width:900px){
+  .feat{grid-template-columns:1fr}
+  .feat.rev .ph{order:0}
+  .feat .ph,.feat .ph img.cover{min-height:240px}
+  .feat .ph.duo img{height:170px}
+  .feat .tx{padding:28px 24px}
+  .more{grid-template-columns:1fr}
+  .hero .pic{padding-bottom:30px}
+}
+
+.lab .prose p{color:#c9cbd1;font-size:17px;margin-bottom:20px}
+.lab .prose p.first{font-size:20px;color:#fff;line-height:1.55}
+.lab .prose b{color:#fff;font-weight:500}
+.lab .prose .btn{margin-top:10px}
+.lab .cols{grid-template-columns:1.2fr .8fr}
+.lab figure.big img{height:260px;object-fit:cover;padding:0}
+.feat .ph.duo img:nth-child(2){object-fit:cover;border-radius:14px}
+.hero .pic img{max-width:620px}
+@media(max-width:900px){.lab .cols{grid-template-columns:1fr}}
+
+/* ===== tema nero ===== */
+:root{--ink:#f3f1ec;--grey:#a6a8af;--paper:#0b0c0e;--soft:#101114;--line:#272930;--arch:#17181c;--dark:#060607}
+body{background:var(--paper)}
+header{background:rgba(11,12,14,.92)}
+.btn.full{color:#0b0c0e}
+.btn.full:hover{color:#fff}
+.btn.line:hover{color:#0b0c0e}
+.btn.gold:hover{color:#0b0c0e}
+.hero .pic img{background:#fff;border-radius:26px;padding:22px}
+.facts{background:#131418;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts b{color:var(--gold)}
+.feat{background:#131418}
+.feat .ph{background:#fff}
+.box{background:#131418}
+.lab{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+footer{border-top:1px solid var(--line)}
+@media(max-width:900px){nav{background:#0b0c0e}}
+
+/* tecnologie v3 */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.tcard{background:#131418;border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.25s}
+.tcard:hover{transform:translateY(-4px);border-color:var(--gold)}
+.tcard .ph{height:250px;overflow:hidden}
+.tcard .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.85)}
+.tcard .tx{padding:24px 26px 30px}
+.tcard .cat{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.tcard h3{font-size:23px;margin:7px 0 10px}
+.tcard p{font-size:15.5px;color:var(--grey)}
+.also{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);color:var(--grey);font-size:16px}
+@media(max-width:900px){.tgrid{grid-template-columns:1fr}.tcard .ph{height:220px}}
+
+/* noleggio */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:50px}
+.steps div{border-top:2px solid var(--gold);padding-top:20px}
+.steps span{font-size:34px;font-weight:300;color:var(--gold);line-height:1}
+.steps h3{margin:12px 0 8px}
+.steps p{font-size:15.5px;color:var(--grey)}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+@media(min-width:901px){nav{gap:24px}}
+footer{padding-bottom:100px}
+#menu{color:var(--ink)}
+header .wrap{height:92px}
+header .logo img{height:70px}
+footer img{height:84px}
+@media(max-width:900px){nav{top:92px}}
+
+/* centro tecnico v3 */
+.lab figure{background:#000}
+.lab figure img,.lab figure.big img{object-fit:cover;padding:0;filter:saturate(.9)}
+.systems{margin-top:60px;padding-top:30px;border-top:1px solid var(--line)}
+.systems .lbl{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:22px}
+.systems .row{display:grid;grid-template-columns:220px 220px 1fr;gap:22px;align-items:stretch}
+.systems figure{background:#fff;border-radius:16px;position:relative;overflow:hidden;height:230px}
+.systems figure img{width:100%;height:100%;object-fit:contain;padding:14px 14px 34px;filter:none}
+.systems .txt{display:flex;flex-direction:column;justify-content:center;padding-left:18px}
+.systems .txt p{color:#dcdcdf;font-size:18px;line-height:1.55}
+.systems small{display:block;margin-top:14px;color:#7d7f87;font-size:12px}
+@media(max-width:900px){.systems .row{grid-template-columns:1fr 1fr}.systems .txt{grid-column:1/3;padding-left:0}.systems figure{height:190px}}
+.systems figcaption{left:8px;right:8px;bottom:8px;text-align:center;font-size:10px;letter-spacing:.1em;border-radius:10px;padding:5px 6px}
+
+/* sterilizzazione e dispositivi medici */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.duo article{background:#131418;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:20px;padding:38px 40px}
+.duo .cat{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.duo h3{font-size:28px;margin:8px 0 14px}
+.duo p{color:var(--grey);font-size:16.5px}
+.duo ul{list-style:none;margin-top:20px}
+.duo li{padding:11px 0 11px 22px;border-top:1px solid var(--line);font-size:15.5px;position:relative}
+.duo li::before{content:"";position:absolute;left:0;top:22px;width:8px;height:1px;background:var(--gold)}
+footer a{color:#c9cbd1;border-bottom:1px solid #555}
+footer .wrap div{line-height:1.9}
+@media(max-width:900px){.duo{grid-template-columns:1fr}.duo article{padding:28px 24px}}
+.cred{display:block;margin-top:12px;font-size:11px;color:#7d7f87}
+.more-link{display:inline-block;margin-top:16px;font-weight:500;font-size:16px;color:var(--gold);border-bottom:1px solid var(--gold);align-self:flex-start}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Assistenza e manutenzione Lumenis LightSheer", "serviceType": "Manutenzione e riparazione laser a diodo per epilazione", "provider": {"@type": "LocalBusiness", "name": "DEBEAUTY", "url": "https://www.debeauty.it/", "telephone": "+39 342 0416390", "address": {"@type": "PostalAddress", "streetAddress": "Via Messina 27/A", "postalCode": "09023", "addressLocality": "Monastir", "addressRegion": "CA", "addressCountry": "IT"}}, "areaServed": ["Sardegna", "Italia"], "url": "https://www.debeauty.it/assistenza-lumenis-lightsheer.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quali modelli sono assistiti?", "acceptedAnswer": {"@type": "Answer", "text": "I laser a diodo della famiglia LightSheer: Desire, Duet, Infinity, ET e XC. Per altri sistemi Lumenis è sufficiente indicare il modello nella richiesta."}}, {"@type": "Question", "name": "L'assistenza è disponibile fuori dalla Sardegna?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Diagnosi e riparazione avvengono in laboratorio. Spedizioni con DHL Express da tutta Italia, con ritiro e riconsegna organizzati da DEBEAUTY."}}, {"@type": "Question", "name": "La diagnosi è a pagamento?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Una diagnosi accurata richiede ore di banco e strumentazione di misura. Se il preventivo viene accettato, è compresa nel costo della riparazione; in caso contrario restano a carico del cliente la diagnosi e il trasporto."}}, {"@type": "Question", "name": "È previsto l'intervento presso il centro?", "acceptedAnswer": {"@type": "Answer", "text": "L'intervento in sede è possibile su richiesta, con uscita a pagamento. Nella maggior parte dei casi la diagnosi in laboratorio è più rapida e più completa."}}, {"@type": "Question", "name": "Ogni quanto va eseguita la manutenzione di un LightSheer?", "acceptedAnswer": {"@type": "Answer", "text": "Il fabbricante prevede una manutenzione periodica annuale. Un controllo regolare del circuito di raffreddamento e dell'energia emessa previene la maggior parte dei fermi macchina."}}]}</script>
+<style>
+.svc{padding-top:70px}
+.svc h1{font-size:clamp(32px,4.6vw,54px);margin-top:16px;max-width:18ch}
+.svc .top{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.svc .top figure{background:#fff;border-radius:22px;overflow:hidden}
+.svc .top figure img{width:100%;height:340px;object-fit:contain;padding:22px}
+.svc h2{font-size:clamp(24px,3vw,34px);margin:70px 0 6px}
+.svc .lead{max-width:62ch}
+.svc .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
+.svc .cols3 article{background:#131418;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:18px;padding:28px}
+.svc .cols3 h3{font-size:20px;margin-bottom:8px}
+.svc .cols3 p,.svc li,.svc .faq p{color:#c9cbd1;font-size:16px}
+.svc ul.plain{list-style:none;margin-top:22px;max-width:760px}
+.svc ul.plain li{padding:13px 0 13px 24px;border-top:1px solid var(--line);position:relative}
+.svc ul.plain li::before{content:"";position:absolute;left:0;top:25px;width:9px;height:1px;background:var(--gold)}
+.svc .models{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.svc .models span{border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:15px;font-weight:400}
+.svc .faq{max-width:820px;margin-top:20px}
+.svc .faq h3{font-size:19px;margin:26px 0 6px}
+.svc .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.svc small.note{display:block;margin:60px 0 90px;color:#7d7f87;font-size:12.5px;max-width:820px}
+@media(max-width:900px){.svc .top,.svc .cols3{grid-template-columns:1fr}.svc .top figure img{height:240px}}
+.wa,.ig{position:fixed;right:20px;z-index:30;color:#fff;font-weight:500;font-size:15px;padding:13px 20px;border-radius:999px;box-shadow:0 10px 26px rgba(0,0,0,.28);min-width:118px;text-align:center}
+.wa{bottom:78px;background:#25d366}
+.ig{bottom:134px;background:linear-gradient(45deg,#f58529,#dd2a7b 55%,#8134af)}
+footer{padding-bottom:200px}
+.wa,.ig{width:46px;height:46px;min-width:0;padding:0;right:14px;display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 6px 16px rgba(0,0,0,.35);font-size:0}
+.wa{bottom:66px}
+.ig{bottom:120px}
+footer{padding-bottom:180px}
+@media(min-width:901px){.wa,.ig{width:50px;height:50px;right:20px}.wa{bottom:70px}.ig{bottom:128px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="index.html"><img src="img/logo_white_menu.svg" alt="DEBEAUTY"></a>
+<nav id="nav"><a href="index.html#tecnologie">Tecnologie</a><a href="index.html#noleggio">Noleggio</a><a href="index.html#laboratorio">Centro tecnico</a><a href="index.html#contatti">Contatti</a></nav>
+<a class="btn full" href="https://wa.me/393420416390?text=Buongiorno%2C%20vorrei%20assistenza%20per%20un%20Lumenis%20LightSheer.%20Modello%3A%20">Richiedi assistenza</a>
+<button id="menu" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button></div></header>
+
+<main class="wrap svc">
+  <div class="top">
+    <div>
+      <div class="eyebrow">Centro tecnico DEBEAUTY</div>
+      <h1>Assistenza e manutenzione Lumenis LightSheer</h1>
+      <p class="lead">Diagnosi, manutenzione periodica e riparazione dei laser a diodo Lumenis LightSheer per centri estetici e studi medici.</p>
+      <div class="cta"><a class="btn full" href="https://wa.me/393420416390?text=Buongiorno%2C%20vorrei%20assistenza%20per%20un%20Lumenis%20LightSheer.%20Modello%3A%20">Richiedi assistenza su WhatsApp</a><a class="btn line" href="tel:+393420416390">Chiama 342 0416390</a></div>
+    </div>
+    <figure><img src="img/ls_desire.jpg" alt="Laser a diodo Lumenis LightSheer Desire"></figure>
+  </div>
+
+  <h2>Modelli assistiti</h2>
+  <p class="lead">Sistemi della famiglia LightSheer e relativi manipoli.</p>
+  <div class="models"><span>LightSheer Desire</span><span>LightSheer Duet</span><span>LightSheer Infinity</span><span>LightSheer ET</span><span>LightSheer XC</span></div>
+
+  <h2>Cosa facciamo</h2>
+  <div class="cols3">
+    <article><h3>Manutenzione periodica</h3><p>Controllo e ripristino del circuito di raffreddamento, liquido, filtri e flussimetro. Pulizia delle ottiche, verifiche funzionali e di sicurezza, secondo le indicazioni del fabbricante.</p></article>
+    <article><h3>Diagnosi e riparazione</h3><p>Analisi dei codici di errore e dei blocchi all'avvio, ricerca del guasto su alimentazione, elettronica di controllo, raffreddamento e manipoli. Preventivo prima di ogni intervento.</p></article>
+    <article><h3>Verifica dell'energia</h3><p>Misura dell'energia realmente emessa dal manipolo con misuratore a termopila, e confronto con il valore impostato. È il dato che indica se il sistema lavora secondo specifica.</p></article>
+  </div>
+
+  <h2>L'alternativa alla sostituzione</h2>
+  <p class="lead">Quando un manipolo perde potenza o un sistema si ferma, la risposta più comune è la sostituzione dell'intero componente. Il nostro lavoro parte dalla diagnosi: in molti casi il guasto si ripara, e il manipolo si rigenera, senza sostituire ciò che funziona ancora.</p>
+  <p class="lead">Le condizioni sono chiare e uguali per tutti: diagnosi in laboratorio, preventivo scritto prima di ogni intervento, spedizioni con DHL Express.</p>
+
+  <h2>Quando richiedere assistenza</h2>
+  <ul class="plain">
+    <li>Il laser segnala un errore all'accensione o si blocca durante il trattamento</li>
+    <li>Il sistema si ferma per il raffreddamento o perde liquido</li>
+    <li>I risultati sono calati e si sospetta un'energia più bassa di quella impostata</li>
+    <li>Il manipolo scalda, non raffredda la pelle o ha il puntale danneggiato</li>
+    <li>È passato più di un anno dall'ultima manutenzione</li>
+    <li>Valutazione tecnica di un LightSheer usato, prima dell'acquisto</li>
+  </ul>
+
+  <h2>Come lavoriamo</h2>
+  <ul class="plain">
+    <li><b>Primo contatto.</b> Modello, numero di serie ed eventuale codice di errore consentono una prima valutazione.</li>
+    <li><b>Diagnosi in laboratorio.</b> L'apparecchiatura, o il solo manipolo, viene consegnata o spedita al laboratorio. Spedizioni con DHL Express, assicurate e tracciate. L'esame avviene al banco, con strumentazione di misura.</li>
+    <li><b>Preventivo.</b> Diagnosi e preventivo vengono consegnati per iscritto. Se il preventivo viene accettato, la diagnosi è compresa nella riparazione; in caso contrario restano a carico del cliente la diagnosi e il trasporto.</li>
+    <li><b>Intervento e collaudo.</b> Riparazione, verifica finale dell'energia emessa e rapporto scritto dell'intervento.</li>
+  </ul>
+
+  <h2>Domande frequenti</h2>
+  <div class="faq">
+    <h3>Quali modelli sono assistiti?</h3><p>I laser a diodo della famiglia LightSheer: Desire, Duet, Infinity, ET e XC. Per altri sistemi Lumenis è sufficiente indicare il modello nella richiesta.</p>
+    <h3>L'assistenza è disponibile fuori dalla Sardegna?</h3><p>Sì. Diagnosi e riparazione avvengono in laboratorio. Spedizioni con DHL Express da tutta Italia, con ritiro e riconsegna organizzati da DEBEAUTY.</p>
+    <h3>La diagnosi è a pagamento?</h3><p>Sì. Una diagnosi accurata richiede ore di banco e strumentazione di misura. Se il preventivo viene accettato, è compresa nel costo della riparazione; in caso contrario restano a carico del cliente la diagnosi e il trasporto.</p>
+    <h3>È previsto l'intervento presso il centro?</h3><p>L'intervento in sede è possibile su richiesta, con uscita a pagamento. Nella maggior parte dei casi la diagnosi in laboratorio è più rapida e più completa.</p>
+    <h3>Ogni quanto va eseguita la manutenzione di un LightSheer?</h3><p>Il fabbricante prevede una manutenzione periodica annuale. Un controllo regolare del circuito di raffreddamento e dell'energia emessa previene la maggior parte dei fermi macchina.</p>
+  </div>
+
+  <div class="cta"><a class="btn gold" href="https://wa.me/393420416390?text=Buongiorno%2C%20vorrei%20assistenza%20per%20un%20Lumenis%20LightSheer.%20Modello%3A%20">Richiedi assistenza</a><a class="btn line" href="index.html#laboratorio">Il centro tecnico</a></div>
+
+  <small class="note">DEBEAUTY è un centro di assistenza indipendente e non è affiliato a Lumenis né da essa autorizzato. Lumenis e LightSheer sono marchi dei rispettivi proprietari, citati al solo scopo di indicare le apparecchiature assistite.</small>
+</main>
+<footer><div class="wrap"><img src="img/logo_white.svg" alt="DEBEAUTY"><div>DEBEAUTY di Bellafiore Diego · Via Messina 27/A, 09023 Monastir (CA) · P.IVA 03807110923<br><a href="index.html">Home</a> · <a href="privacy.html">Privacy e note legali</a></div></div></footer>
+<script>document.querySelectorAll("#nav a").forEach(a=>a.addEventListener("click",()=>document.getElementById("nav").classList.remove("open")))</script>
+<a class="ig" href="https://www.instagram.com/debeauty.it/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="#fff" stroke="none"/></svg></a>
+<a class="wa" href="https://wa.me/393420416390" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8l1.3-4.6A8.6 8.6 0 1 1 7.9 19.5z"/><path d="M9 8.6c-.3 2.9 3.400 6.300 6.300 6.300" stroke-width="2.4"/></svg></a>
+</body>
+</html>
