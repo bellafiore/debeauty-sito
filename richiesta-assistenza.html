@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="img/logo_white_menu.svg">
+<title>Richiesta di assistenza tecnica – DEBEAUTY</title>
+<style>
+@font-face{font-family:Outfit;font-style:normal;font-weight:300 600;font-display:swap;src:url(font/outfit-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:Outfit;font-style:normal;font-weight:300 600;font-display:swap;src:url(font/outfit-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+:root{--ink:#f3f1ec;--grey:#a6a8af;--paper:#0b0c0e;--field:#131418;--line:#272930;--gold:#a88b5c;--err:#e8826f}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Outfit,system-ui,sans-serif;font-weight:300;color:var(--ink);background:var(--paper);line-height:1.55;font-size:16px}
+a{color:inherit}
+header{border-bottom:1px solid var(--line)}
+header .in{max-width:680px;margin:0 auto;padding:10px 16px;display:flex;align-items:center}
+header img{height:58px;display:block}
+main{max-width:680px;margin:0 auto;padding:30px 16px 64px}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
+h1{font-size:clamp(28px,7vw,40px);font-weight:500;line-height:1.12;letter-spacing:-.01em;margin:10px 0 14px}
+fieldset{border:0;margin-top:38px}
+legend{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;padding-bottom:4px}
+label{display:block;margin-top:16px;font-size:15px;font-weight:400}
+.req{color:var(--gold)}
+input[type=text],input[type=tel],input[type=email],textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-size:16px;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:12px}
+textarea{min-height:100px;resize:vertical}
+input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+.hint{display:block;color:var(--grey);font-size:13.5px;font-weight:300;margin-top:3px}
+.bad{border-color:var(--err)!important}
+ol.cond{margin-top:12px;padding-left:22px;color:#d9d7d2}
+ol.cond li{margin:9px 0;padding-left:4px}
+.check{display:flex;gap:12px;align-items:flex-start;margin-top:22px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--field);font-weight:400}
+.check input{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--gold)}
+.pad{margin-top:8px;background:#f6f3ec;border-radius:12px;position:relative;border:1px solid var(--line)}
+.pad canvas{display:block;width:100%;height:190px;touch-action:none;cursor:crosshair}
+.pad span{position:absolute;left:14px;bottom:10px;color:#9a968c;font-size:13px;pointer-events:none}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font:inherit;font-weight:500;font-size:15px;letter-spacing:.02em;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;text-decoration:none;text-align:center}
+.btn.full{background:var(--ink);color:#0b0c0e}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn.small{padding:8px 16px;font-size:14px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.big{width:100%;margin-top:30px;padding:16px}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.thumbs div{position:relative}
+.thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;display:block}
+.thumbs button{position:absolute;top:5px;right:5px;width:28px;height:28px;border-radius:50%;border:0;background:rgba(0,0,0,.7);color:#fff;font-size:16px;line-height:28px;cursor:pointer}
+input[type=file]{display:none}
+.note{color:var(--grey);font-size:13.5px;margin-top:18px}
+#errore{color:var(--err);margin-top:14px;font-weight:400}
+#esito{display:none;margin-top:28px;padding:20px;border:1px solid var(--gold);border-radius:16px}
+#esito h2{font-size:22px;font-weight:500}
+#esito p{color:var(--grey);margin-top:6px}
+#esito .btn{flex:1 1 200px}
+footer{border-top:1px solid var(--line);color:#8d8f96;font-size:13px;padding:24px 16px 40px;text-align:center}
+</style>
+</head>
+<body>
+<header><div class="in"><a href="index.html"><img src="img/logo_white_menu.svg" alt="DEBEAUTY"></a></div></header>
+<main>
+  <div class="eyebrow">Centro tecnico</div>
+  <h1>Richiesta di assistenza tecnica</h1>
+
+  <form id="modulo" novalidate autocomplete="on">
+    <fieldset>
+      <legend>Cliente</legend>
+      <label>Nome o ragione sociale <span class="req">*</span><input type="text" id="nome" autocomplete="organization"></label>
+      <label>Partita IVA o codice fiscale <span class="req">*</span><input type="text" id="piva"></label>
+      <label>Codice SDI o PEC<span class="hint">Per la fattura elettronica</span><input type="text" id="sdi"></label>
+      <label>Indirizzo <span class="req">*</span><input type="text" id="indirizzo" autocomplete="street-address"></label>
+      <label>Indirizzo di ritiro<span class="hint">Solo se diverso da quello sopra</span><input type="text" id="ritiro"></label>
+      <label>Telefono <span class="req">*</span><input type="tel" id="tel" autocomplete="tel"></label>
+      <label>Email<input type="email" id="email" autocomplete="email"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Apparecchio</legend>
+      <label>Foto della targhetta <span class="req">*</span><span class="hint">L'etichetta con marca, modello e matricola, di solito sul retro o sotto l'apparecchio. Se il manipolo ha la sua, fotografate anche quella.</span></label>
+      <div class="row"><label class="btn small" for="foto_targa" style="margin-top:0">Aggiungi foto</label></div>
+      <input type="file" id="foto_targa" accept="image/*" multiple>
+      <div class="thumbs" id="thumbs_targa"></div>
+      <label style="margin-top:24px">Foto dello schermo con l'errore<span class="hint">Se sullo schermo compare un messaggio di errore.</span></label>
+      <div class="row"><label class="btn small" for="foto_errore" style="margin-top:0">Aggiungi foto</label></div>
+      <input type="file" id="foto_errore" accept="image/*" multiple>
+      <div class="thumbs" id="thumbs_errore"></div>
+      <label style="margin-top:24px">Difetto riscontrato <span class="req">*</span><textarea id="difetto"></textarea></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Condizioni</legend>
+      <ol class="cond" id="condizioni"></ol>
+      <label class="check"><input type="checkbox" id="accetto"><span>Il cliente dichiara di avere titolo a far eseguire l'intervento sull'apparecchio e accetta le condizioni. <span class="req">*</span></span></label>
+      <p class="note">I dati sono trattati ai sensi del Reg. UE 2016/679 solo per eseguire il servizio (<a href="privacy.html#assistenza">informativa</a>).</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Firma</legend>
+      <label>Nome e cognome di chi firma <span class="req">*</span><input type="text" id="firmatario" autocomplete="name"></label>
+      <label style="margin-top:20px">Firma <span class="req">*</span></label>
+      <div class="pad" id="padbox"><canvas id="firma"></canvas><span id="padhint">Firmate qui</span></div>
+      <div class="row"><button type="button" class="btn small" id="cancella">Cancella firma</button></div>
+    </fieldset>
+
+    <div id="errore" role="alert"></div>
+    <button type="submit" class="btn full big" id="crea">Crea il PDF firmato</button>
+  </form>
+
+  <div id="esito">
+    <h2>Il modulo è pronto</h2>
+    <p id="esitotesto">Inviatelo su WhatsApp: scegliete la chat con DEBEAUTY (342 0416390).</p>
+    <div class="row" style="margin-top:16px">
+      <button type="button" class="btn gold" id="invia">Invia su WhatsApp</button>
+      <a class="btn" id="scarica" href="#">Scarica il PDF</a>
+      <a class="btn" id="apriwa" href="#" target="_blank" rel="noopener" style="display:none">Apri WhatsApp</a>
+    </div>
+  </div>
+</main>
+<footer>DEBEAUTY di Bellafiore Diego · Via Messina 27/A, 09023 Monastir (CA) · P.IVA 03807110923</footer>
+
+<script>
+(function(){
+'use strict';
+var NUM_WA = '393420416390';
+var GIORNI = 7;
+var CHIAVE = 'debeauty_richiesta_assistenza';
+
+// costo della diagnosi: 240 € (regime forfettario, senza IVA); per un caso particolare il link ?d=… lo cambia
+var costo = (new URLSearchParams(location.search).get('d') || '').replace(/[^0-9.,]/g, '') || '240';
+var testoCosto = 'Costo della diagnosi: ' + costo + ' €';
+var CONDIZIONI = [
+  'La diagnosi si esegue nel laboratorio DEBEAUTY di Monastir (CA). ' + testoCosto + ', compreso nella riparazione se il preventivo viene accettato.',
+  'Il trasporto con DHL Express è a carico del cliente e si conteggia a parte.',
+  "All'arrivo lo stato dell'apparecchio viene documentato con foto, che vengono inviate al cliente.",
+  'Oltre alla diagnosi non si esegue nessun intervento senza un preventivo accettato per iscritto.',
+  'Entro ' + GIORNI + " giorni dal preventivo il cliente lo accetta o chiede la restituzione dell'apparecchio."
+];
+var DICHIARAZIONE = "Il cliente dichiara di avere titolo a far eseguire l'intervento sull'apparecchio e accetta le condizioni.";
+var SEZIONI = [
+  ['Cliente', [['nome','Nome o ragione sociale'],['piva','Partita IVA o codice fiscale'],['sdi','Codice SDI o PEC'],
+               ['indirizzo','Indirizzo'],['ritiro','Indirizzo di ritiro'],['tel','Telefono'],['email','Email']]],
+  ['Apparecchio', [['difetto','Difetto riscontrato']]]
+];
+var OBBLIGATORI = ['nome','piva','indirizzo','tel','difetto','firmatario'];
+var CAMPI = ['nome','piva','sdi','indirizzo','ritiro','tel','email','difetto','firmatario'];
+
+var $ = function(id){ return document.getElementById(id); };
+var ol = $('condizioni');
+CONDIZIONI.forEach(function(t){ var li = document.createElement('li'); li.textContent = t; ol.appendChild(li); });
+
+// ---------- bozza salvata sul telefono ----------
+function salvaBozza(){
+  var d = {}; CAMPI.forEach(function(k){ d[k] = $(k).value; });
+  try { localStorage.setItem(CHIAVE, JSON.stringify(d)); } catch(e) {}
+}
+function leggiBozza(){
+  try { var d = JSON.parse(localStorage.getItem(CHIAVE) || 'null'); if (d) CAMPI.forEach(function(k){ if (d[k]) $(k).value = d[k]; }); } catch(e) {}
+}
+function cancellaBozza(){ try { localStorage.removeItem(CHIAVE); } catch(e) {} }
+leggiBozza();
+
+// ---------- firma ----------
+var cv = $('firma'), ctx = cv.getContext('2d');
+var tratti = [], corrente = null;
+function dimensiona(){
+  var r = cv.getBoundingClientRect(), dpr = Math.max(1, window.devicePixelRatio || 1);
+  cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr);
+  ridisegna();
+}
+function stile(g){ g.lineWidth = 2.4; g.lineCap = 'round'; g.lineJoin = 'round'; g.strokeStyle = '#111'; g.fillStyle = '#111'; }
+function tratto(g, t){
+  if (t.length === 1){ g.beginPath(); g.arc(t[0][0], t[0][1], 1.3, 0, 7); g.fill(); return; }
+  g.beginPath(); g.moveTo(t[0][0], t[0][1]);
+  for (var i = 1; i < t.length; i++) g.lineTo(t[i][0], t[i][1]);
+  g.stroke();
+}
+function ridisegna(){
+  var r = cv.getBoundingClientRect(), s = cv.width / (r.width || 1);
+  ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0, 0, cv.width, cv.height);
+  ctx.setTransform(s,0,0,s,0,0); stile(ctx);
+  tratti.forEach(function(t){ tratto(ctx, t); });
+  $('padhint').style.display = tratti.length ? 'none' : '';
+}
+function punto(e){ var r = cv.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; }
+cv.addEventListener('pointerdown', function(e){
+  e.preventDefault(); try { cv.setPointerCapture(e.pointerId); } catch(x) {}
+  corrente = [punto(e)]; tratti.push(corrente); ridisegna(); nascondiEsito();
+});
+cv.addEventListener('pointermove', function(e){ if (!corrente) return; e.preventDefault(); corrente.push(punto(e)); ridisegna(); });
+['pointerup','pointercancel','pointerleave'].forEach(function(ev){ cv.addEventListener(ev, function(){ corrente = null; }); });
+$('cancella').addEventListener('click', function(){ tratti = []; ridisegna(); nascondiEsito(); });
+window.addEventListener('resize', dimensiona);
+dimensiona();
+function firmaPresente(){ var n = 0; tratti.forEach(function(t){ n += t.length; }); return n >= 8; }
+
+// ---------- foto ----------
+var GRUPPI = {
+  targa:  {max: 3, foto: [], titolo: 'Targhetta'},
+  errore: {max: 3, foto: [], titolo: "Schermo con l'errore"}
+};
+Object.keys(GRUPPI).forEach(function(k){
+  var gr = GRUPPI[k];
+  $('foto_' + k).addEventListener('change', function(){
+    var files = Array.prototype.slice.call(this.files || []);
+    this.value = '';
+    var ok = files.slice(0, Math.max(0, gr.max - gr.foto.length)).map(function(f){
+      return new Promise(function(res){
+        var url = URL.createObjectURL(f), img = new Image();
+        img.onload = function(){ res({url: url, img: img}); };
+        img.onerror = function(){ URL.revokeObjectURL(url); res(null); };
+        img.src = url;
+      });
+    });
+    Promise.all(ok).then(function(lista){ lista.forEach(function(x){ if (x) gr.foto.push(x); }); miniature(k); nascondiEsito(); });
+  });
+});
+function miniature(k){
+  var gr = GRUPPI[k], box = $('thumbs_' + k); box.innerHTML = '';
+  if (gr.foto.length) document.querySelector('label[for=foto_' + k + ']').classList.remove('bad');
+  gr.foto.forEach(function(f, i){
+    var d = document.createElement('div'), im = document.createElement('img'), b = document.createElement('button');
+    im.src = f.url; im.alt = gr.titolo + ' ' + (i + 1);
+    b.type = 'button'; b.textContent = '×'; b.setAttribute('aria-label', 'Togli foto');
+    b.addEventListener('click', function(){ URL.revokeObjectURL(f.url); gr.foto.splice(i, 1); miniature(k); nascondiEsito(); });
+    d.appendChild(im); d.appendChild(b); box.appendChild(d);
+  });
+}
+
+// ---------- pagine del PDF (disegnate come immagini A4 a 150 dpi) ----------
+var W = 1240, H = 1754, M = 110, FONDO = H - M - 30;
+var NERO = '#16171b', GRIGIO = '#5d5f66', ORO = '#a88b5c', LINEA = '#d9d3c7';
+var pagine, g, y;
+function nuovaPagina(){
+  var c = document.createElement('canvas'); c.width = W; c.height = H;
+  g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, W, H); g.textBaseline = 'alphabetic';
+  pagine.push(c); y = M;
+}
+function spazio(h){ if (y + h > FONDO) nuovaPagina(); }
+function righe(testo, font, larg){
+  g.font = font; var out = [];
+  String(testo).split(/\r?\n/).forEach(function(par){
+    var riga = '';
+    par.split(/\s+/).forEach(function(p){
+      if (!p) return;
+      while (g.measureText(p).width > larg){            // parola più lunga della riga
+        var k = p.length; while (k > 1 && g.measureText(p.slice(0, k)).width > larg) k--;
+        if (riga){ out.push(riga); riga = ''; }
+        out.push(p.slice(0, k)); p = p.slice(k);
+      }
+      var prova = riga ? riga + ' ' + p : p;
+      if (riga && g.measureText(prova).width > larg){ out.push(riga); riga = p; } else riga = prova;
+    });
+    out.push(riga);
+  });
+  return out;
+}
+function titoloSezione(t){
+  spazio(70); y += 26;
+  g.font = '500 18px Outfit'; g.fillStyle = ORO; g.fillText(t.toUpperCase(), M, y);
+  y += 10; g.fillStyle = LINEA; g.fillRect(M, y, W - 2 * M, 2); y += 8;
+}
+function campo(etichetta, valore){
+  var colE = 330, larg = W - 2 * M - colE, lh = 28;
+  var rv = righe(valore || '—', '400 21px Outfit', larg);
+  var re = righe(etichetta, '300 19px Outfit', colE - 24);
+  var h = Math.max(rv.length, re.length) * lh + 8;
+  spazio(h);
+  g.fillStyle = GRIGIO; g.font = '300 19px Outfit';
+  re.forEach(function(r, i){ g.fillText(r, M, y + 24 + i * lh); });
+  g.fillStyle = valore ? NERO : '#9a9a9a'; g.font = '400 21px Outfit';
+  rv.forEach(function(r, i){ g.fillText(r, M + colE, y + 24 + i * lh); });
+  y += h;
+}
+function paragrafo(testo, rientro, numero){
+  var lh = 28, x = M + (rientro || 0), rr = righe(testo, '300 20px Outfit', W - M - x);
+  spazio(rr.length * lh + 8);
+  g.fillStyle = NERO; g.font = '300 21px Outfit';
+  if (numero) { g.fillStyle = ORO; g.font = '500 20px Outfit'; g.fillText(numero, M, y + 24); g.fillStyle = NERO; g.font = '300 20px Outfit'; }
+  rr.forEach(function(r, i){ g.fillText(r, x, y + 24 + i * lh); });
+  y += rr.length * lh + 8;
+}
+function intestazione(quando){
+  g.fillStyle = NERO; g.font = '600 46px Outfit'; g.fillText('DEBEAUTY', M, y + 40);
+  g.fillStyle = GRIGIO; g.font = '300 19px Outfit';
+  g.fillText('Via Messina 27/A, 09023 Monastir (CA)  ·  Tel. 342 0416390  ·  info@debeauty.it  ·  www.debeauty.it', M, y + 72);
+  g.fillStyle = ORO; g.fillRect(M, y + 88, W - 2 * M, 3);
+  g.fillStyle = NERO; g.font = '500 36px Outfit'; g.fillText('Richiesta di assistenza tecnica', M, y + 144);
+  g.fillStyle = GRIGIO; g.font = '300 19px Outfit'; g.fillText('Compilata e firmata dal cliente il ' + quando, M, y + 176);
+  y += 184;
+}
+function disegnaFirma(nomeFirma, quando){
+  var r = cv.getBoundingClientRect(), s = Math.min(560 / r.width, 160 / r.height);
+  var larg = Math.round(r.width * s), alt = Math.round(r.height * s);
+  spazio(alt + 250);
+  y += 22;
+  // spunta della dichiarazione
+  g.strokeStyle = NERO; g.lineWidth = 2; g.strokeRect(M, y + 4, 26, 26);
+  g.beginPath(); g.moveTo(M + 5, y + 17); g.lineTo(M + 11, y + 25); g.lineTo(M + 22, y + 8); g.lineWidth = 3.5; g.stroke();
+  var rd = righe(DICHIARAZIONE, '400 21px Outfit', W - 2 * M - 44);
+  g.fillStyle = NERO; g.font = '400 21px Outfit';
+  rd.forEach(function(t, i){ g.fillText(t, M + 44, y + 25 + i * 30); });
+  y += rd.length * 30 + 22;
+  g.fillStyle = GRIGIO; g.font = '300 19px Outfit'; g.fillText('Firma del cliente', M, y + 20); y += 26;
+  // firma ridisegnata dai tratti, in scala
+  g.save(); g.translate(M, y); g.scale(s, s); stile(g); g.lineWidth = 2.4;
+  tratti.forEach(function(t){ tratto(g, t); });
+  g.restore();
+  y += alt;
+  g.fillStyle = LINEA; g.fillRect(M, y, Math.max(larg, 420), 2); y += 30;
+  g.fillStyle = NERO; g.font = '400 21px Outfit'; g.fillText(nomeFirma, M, y);
+  g.fillStyle = GRIGIO; g.font = '300 19px Outfit'; g.fillText(quando, M, y + 28);
+  y += 40;
+}
+function tutteLeFoto(){
+  var tutte = [];
+  Object.keys(GRUPPI).forEach(function(k){ GRUPPI[k].foto.forEach(function(f){ tutte.push({img: f.img, titolo: GRUPPI[k].titolo}); }); });
+  return tutte;
+}
+function paginaFoto(){
+  var tutte = tutteLeFoto();
+  if (!tutte.length) return;
+  nuovaPagina();
+  var maxW = W - 2 * M, maxH = Math.floor((FONDO - M) / 2) - 70;
+  tutte.forEach(function(f){
+    var im = f.img, k = Math.min(maxW / im.naturalWidth, maxH / im.naturalHeight, 1.5);
+    var w = Math.round(im.naturalWidth * k), h = Math.round(im.naturalHeight * k);
+    if (y + 34 + h > FONDO) nuovaPagina();
+    g.fillStyle = ORO; g.font = '500 18px Outfit'; g.fillText(f.titolo.toUpperCase(), M, y + 20); y += 34;
+    g.drawImage(im, M + Math.round((maxW - w) / 2), y, w, h);
+    y += h + 30;
+  });
+}
+function piede(){
+  var n = pagine.length;
+  pagine.forEach(function(c, i){
+    var p = c.getContext('2d');
+    p.fillStyle = LINEA; p.fillRect(M, H - M + 20, W - 2 * M, 1);
+    p.fillStyle = GRIGIO; p.font = '300 16px Outfit';
+    p.fillText('DEBEAUTY di Bellafiore Diego  ·  P.IVA 03807110923  ·  Richiesta di assistenza tecnica', M, H - M + 48);
+    var t = 'Pagina ' + (i + 1) + ' di ' + n; p.fillText(t, W - M - p.measureText(t).width, H - M + 48);
+  });
+}
+
+// ---------- PDF minimo: una immagine JPEG per pagina ----------
+function aBlob(c){ return new Promise(function(res){ c.toBlob(res, 'image/jpeg', 0.85); }); }
+function costruisciPdf(lista, data){
+  var enc = new TextEncoder(), pezzi = [], pos = 0, off = [];
+  function add(b){ if (typeof b === 'string') b = enc.encode(b); pezzi.push(b); pos += b.length; }
+  function obj(n, corpo){ off[n] = pos; add(n + ' 0 obj\n'); [].concat(corpo).forEach(add); add('\nendobj\n'); }
+  var p2 = function(x){ return String(x).padStart(2, '0'); };
+  var stamp = data.getFullYear() + p2(data.getMonth() + 1) + p2(data.getDate()) + p2(data.getHours()) + p2(data.getMinutes()) + p2(data.getSeconds());
+  return Promise.all(lista.map(aBlob)).then(function(blobs){
+    return Promise.all(blobs.map(function(b){ return b.arrayBuffer(); }));
+  }).then(function(bufs){
+    var n = lista.length, kids = [];
+    for (var i = 0; i < n; i++) kids.push((4 + 3 * i) + ' 0 R');
+    add('%PDF-1.4\n'); add(new Uint8Array([0x25, 0xE2, 0xE3, 0xCF, 0xD3, 0x0A]));
+    obj(1, '<< /Type /Catalog /Pages 2 0 R >>');
+    obj(2, '<< /Type /Pages /Kids [' + kids.join(' ') + '] /Count ' + n + ' >>');
+    obj(3, '<< /Title (Richiesta di assistenza tecnica - DEBEAUTY) /Producer (www.debeauty.it) /CreationDate (D:' + stamp + ') >>');
+    for (i = 0; i < n; i++){
+      var jpg = new Uint8Array(bufs[i]), c = 5 + 3 * i, im = 6 + 3 * i;
+      var s = 'q 595.28 0 0 841.89 0 0 cm /Im0 Do Q';
+      obj(4 + 3 * i, '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im0 ' + im + ' 0 R >> >> /Contents ' + c + ' 0 R >>');
+      obj(c, ['<< /Length ' + s.length + ' >>\nstream\n', s, '\nendstream']);
+      obj(im, ['<< /Type /XObject /Subtype /Image /Width ' + lista[i].width + ' /Height ' + lista[i].height +
+               ' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ' + jpg.length + ' >>\nstream\n', jpg, '\nendstream']);
+    }
+    var tot = 4 + 3 * n, xref = pos, x = 'xref\n0 ' + tot + '\n0000000000 65535 f \n';
+    for (var k = 1; k < tot; k++) x += String(off[k]).padStart(10, '0') + ' 00000 n \n';
+    add(x);
+    add('trailer\n<< /Size ' + tot + ' /Root 1 0 R /Info 3 0 R >>\nstartxref\n' + xref + '\n%%EOF\n');
+    return new Blob(pezzi, {type: 'application/pdf'});
+  });
+}
+
+// ---------- controllo e creazione ----------
+var filePdf = null, urlPdf = null;
+function nascondiEsito(){ $('esito').style.display = 'none'; filePdf = null; }
+CAMPI.forEach(function(k){ $(k).addEventListener('input', function(){ this.classList.remove('bad'); salvaBozza(); nascondiEsito(); }); });
+$('accetto').addEventListener('change', nascondiEsito);
+
+$('modulo').addEventListener('submit', function(e){
+  e.preventDefault();
+  var errati = [];   // [elemento, nome], poi in ordine di pagina
+  OBBLIGATORI.forEach(function(k){
+    var el = $(k);
+    if (!el.value.trim()){ el.classList.add('bad'); errati.push([el, el.parentNode.firstChild.textContent.trim()]); }
+  });
+  var btnTarga = document.querySelector('label[for=foto_targa]');
+  if (!GRUPPI.targa.foto.length){ btnTarga.classList.add('bad'); errati.push([btnTarga, 'foto della targhetta']); }
+  else btnTarga.classList.remove('bad');
+  if (!$('accetto').checked) errati.push([$('accetto'), 'accettazione delle condizioni']);
+  if (!firmaPresente()){ $('padbox').classList.add('bad'); errati.push([$('padbox'), 'firma']); }
+  else $('padbox').classList.remove('bad');
+  if (errati.length){
+    errati.sort(function(a, b){ return a[0].compareDocumentPosition(b[0]) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1; });
+    $('errore').textContent = 'Mancano: ' + errati.map(function(e){ return e[1]; }).join(', ') + '.';
+    errati[0][0].scrollIntoView({behavior: 'smooth', block: 'center'});
+    return;
+  }
+  $('errore').textContent = '';
+  var bottone = $('crea'); bottone.disabled = true; bottone.textContent = 'Preparazione del PDF…';
+  var ora = new Date();
+  var quando = ora.toLocaleDateString('it-IT', {day: '2-digit', month: '2-digit', year: 'numeric'}) + ' alle ' + ora.toLocaleTimeString('it-IT', {hour: '2-digit', minute: '2-digit'});
+  Promise.all(['300 20px Outfit', '400 20px Outfit', '500 20px Outfit', '600 20px Outfit'].map(function(f){ return document.fonts ? document.fonts.load(f) : null; }))
+  .catch(function(){}).then(function(){
+    pagine = []; nuovaPagina();
+    intestazione(quando);
+    SEZIONI.forEach(function(sz){
+      titoloSezione(sz[0]);
+      sz[1].forEach(function(c){ campo(c[1], $(c[0]).value.trim()); });
+    });
+    campo('Foto allegate', 'targhetta: ' + GRUPPI.targa.foto.length + ', schermo: ' + GRUPPI.errore.foto.length + ' (in fondo al documento)');
+    titoloSezione('Condizioni');
+    CONDIZIONI.forEach(function(t, i){ paragrafo(t, 34, (i + 1) + '.'); });
+    disegnaFirma($('firmatario').value.trim(), quando);
+    paginaFoto();
+    piede();
+    return costruisciPdf(pagine, ora);
+  }).then(function(blob){
+    var base = ($('nome').value.trim() || 'cliente').replace(/[^A-Za-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'cliente';
+    var p2 = function(x){ return String(x).padStart(2, '0'); };
+    var nomeFile = 'Richiesta-assistenza_' + base + '_' + ora.getFullYear() + '-' + p2(ora.getMonth() + 1) + '-' + p2(ora.getDate()) + '.pdf';
+    filePdf = new File([blob], nomeFile, {type: 'application/pdf'});
+    if (urlPdf) URL.revokeObjectURL(urlPdf);
+    urlPdf = URL.createObjectURL(blob);
+    var a = $('scarica'); a.href = urlPdf; a.download = nomeFile;
+    var puoCondividere = !!(navigator.canShare && navigator.canShare({files: [filePdf]}));
+    $('invia').style.display = puoCondividere ? '' : 'none';
+    var wa = $('apriwa');
+    wa.href = 'https://wa.me/' + NUM_WA + '?text=' + encodeURIComponent('Buongiorno, vi invio il modulo di richiesta di assistenza tecnica (PDF in allegato).');
+    wa.style.display = puoCondividere ? 'none' : '';
+    $('esitotesto').textContent = puoCondividere
+      ? 'Premete "Invia su WhatsApp" e scegliete la chat con DEBEAUTY (342 0416390).'
+      : 'Scaricate il PDF e allegatelo nella chat WhatsApp con DEBEAUTY (342 0416390), oppure inviatelo a info@debeauty.it.';
+    $('esito').style.display = 'block';
+    $('esito').scrollIntoView({behavior: 'smooth', block: 'center'});
+  }).catch(function(err){
+    $('errore').textContent = 'Non è stato possibile creare il PDF su questo telefono. Inviateci le stesse informazioni su WhatsApp.';
+    if (window.console) console.error(err);
+  }).then(function(){ bottone.disabled = false; bottone.textContent = 'Crea il PDF firmato'; });
+});
+
+$('invia').addEventListener('click', function(){
+  if (!filePdf) return;
+  navigator.share({files: [filePdf]}).then(cancellaBozza).catch(function(){});
+});
+})();
+</script>
+</body>
+</html>
